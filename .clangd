@@ -1,0 +1,5 @@
+# 针对使用 clangd 提示的情况
+CompileFlags:
+  Remove:
+    - -forward-unknown-to-host-compiler
+    - --generate-code=arch=compute_52,code=[compute_52,sm_52]

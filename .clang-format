@@ -1,0 +1,124 @@
+BasedOnStyle: LLVM
+IndentWidth: 4
+AccessModifierOffset: -4
+TabWidth: 4
+UseTab: Never
+ContinuationIndentWidth: 4
+# 0 表示不限制每列的字符数； 改成其他数字后，每行会达到最大字符数才换行
+ColumnLimit: 0
+MaxEmptyLinesToKeep: 2
+# Insert an empty line between definition blocks.
+SeparateDefinitionBlocks: Always
+# namespace 的缩进：None、Inner、All
+NamespaceIndentation: All
+
+
+
+# 用于定义 openmp 宏格式
+IndentPPDirectives: BeforeHash
+PPIndentWidth: -1
+
+# 修饰符对齐及先后顺序
+# QualifierAlignment: Custom
+# QualifierOrder: []
+
+
+# =============================================== 基本对齐 align 配置
+# 参数换行时的对齐风格，适用于`{}`、`()` `[]`
+AlignAfterOpenBracket: Align
+# 数组中每个元素的对齐方式
+AlignArrayOfStructures: Right
+
+# 对齐配置：None、Consecutive、AcrossEmptyLines、AcrossComments、AcrossEmptyLinesAndComments
+# assignments 连续对齐
+AlignConsecutiveAssignments: AcrossComments
+# macros 连续对齐
+AlignConsecutiveMacros: None
+# bit fields 连续对齐
+AlignConsecutiveBitFields: AcrossComments
+# declarations 连续对齐
+AlignConsecutiveDeclarations: AcrossComments
+
+
+# 二元或三元运算符对齐
+AlignOperands: AlignAfterOperator
+BreakBeforeBinaryOperators: NonAssignment
+BreakBeforeTernaryOperators: true
+
+
+# if (a) return; 什么时候能放在一行
+AllowShortIfStatementsOnASingleLine: WithoutElse
+# while (true) continue; 是否能放在一行
+AllowShortLoopsOnASingleLine: true
+# 只有空的Blocks能放一行
+AllowShortBlocksOnASingleLine: Empty
+# Lambda 表达式可以一行
+AllowShortLambdasOnASingleLine: Inline
+
+
+# =============================================== 换行 break 配置
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterCaseLabel: false
+  AfterClass: false
+  AfterControlStatement: Never
+  AfterEnum: false
+  AfterFunction: false
+  AfterNamespace: false
+  AfterStruct: false
+  AfterUnion: false
+  AfterExternBlock: false
+  BeforeCatch: false
+  BeforeElse: false
+  BeforeLambdaBody: false
+  BeforeWhile: false
+  IndentBraces: false
+  # 以下三项分别需要开启 AfterFunction、AfterClass、AfterNamespace 才有效
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+
+
+# =============================================== 空格 space 配置
+# 在 C style 强制转换后面插入一个空格
+SpaceAfterCStyleCast: true
+# 在 logical not 运算符 `!` 后插入一个空格
+SpaceAfterLogicalNot: false
+# 在 template 关键字后插入一个空格
+SpaceAfterTemplateKeyword: false
+
+# 初始化列表前面保留一个空格
+SpaceBeforeCpp11BracedList: true
+# 让初始化列表中保留前后两个空格
+Cpp11BracedListStyle: false
+
+# `Foo::Foo() : a(a) {}` 中 colon 前面的空格
+SpaceBeforeCtorInitializerColon: true
+# `class Foo : Bar {}` 中 colon 前面的空格
+SpaceBeforeInheritanceColon: true
+
+# before parentheses
+SpaceBeforeParens: Custom
+SpaceBeforeParensOptions:
+  # 包括了流程控制和循环控制
+  AfterControlStatements: true
+  AfterFunctionDeclarationName: false
+  AfterFunctionDefinitionName: false
+  AfterOverloadedOperator: true
+  BeforeNonEmptyParentheses: false
+
+# range-based for loop colon
+# SpaceBeforeRangeBasedForLoopColon: false
+
+# 空白代码块
+SpaceInEmptyBlock: true
+
+# 只会影响每一行后面的行注释
+SpacesBeforeTrailingComments: 4
+
+# 确保 `*` 前(Right)或后(Left)有一个空格：
+#   Default -> 使用 PointerAligment 替代
+#   Before  -> 确保 ``
+SpaceAroundPointerQualifiers: Default
+PointerAlignment: Left 
+ReferenceAlignment: Pointer

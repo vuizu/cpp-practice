@@ -1,0 +1,1 @@
+add_executable(cuda_test main.cu)
