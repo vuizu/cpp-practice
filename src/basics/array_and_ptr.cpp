@@ -196,4 +196,13 @@ int main() {
     int  nums[] { 1, 2, 3 };
     auto num_ptr  = &nums[0];
     auto nums_ptr = &nums;
+    // 函数名是指向方法的指针
+    auto vari     = main;
+
+    // 一般的计算机以字节编址 + 小端序（低地址存放数据的低位，比如一个 int 类型的值 1 -> 01 00 00 00，由于是按字节编址，刚好 4 个字节）
+
+
+    // 汇编，而栈是向低地址生长的
+    // ax 是16位的 x86CPU 的寄存器，eax 是32位的 x86CPU 的寄存器，而 rax 是64位的 x86CPU 的寄存器，ax只是 eax 的低16位，eax 只是 rax 的低32位。
+    // BYTE 表示占用 1 个字节，WORD 表示占用 2 个字节，DWORD 表示占用 4 个字节，QWORD 表示占用 8 个字节
 }
