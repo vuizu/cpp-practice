@@ -51,4 +51,6 @@ int main() {
 
     int nxt = -2 << 1;
     std::cout << std::bitset<sizeof(int) * 8>(nxt) << "\t" << nxt << std::endl;
+
+    int kk = 1 ^ 2;
 }

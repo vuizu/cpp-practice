@@ -1,0 +1,11 @@
+spack:
+  # add package specs to the `specs` list
+  specs:
+  - cuda@11.8.0
+  - cmake@3.27.9
+  - gcc@13.2.1
+  view: true
+  concretizer:
+    unify: true
+  mirrors:
+    local: file:///root/spark-mirrors
