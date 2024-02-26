@@ -1,8 +1,0 @@
-config:
-  install_tree:
-    root: $spack/opt/spack
-    projections:
-      all: '{architecture}/{compiler.name}-{compiler.version}/{name}-{version}-{hash}'
-  verify_ssl: false
-  checksum: false
-  build_jobs: 4

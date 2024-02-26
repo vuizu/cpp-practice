@@ -3,9 +3,24 @@ spack:
   specs:
   - cuda@11.8.0
   - cmake@3.27.9
-  - gcc@13.2.1
+  - ninja@1.11.1
+  - python@3.10.13
   view: true
   concretizer:
     unify: true
   mirrors:
-    local: file:///root/spark-mirrors
+    local: file:///root/spack-mirrors
+  compilers:
+  - compiler:
+      spec: gcc@=11.4.0
+      paths:
+        cc: /usr/bin/gcc
+        cxx: /usr/bin/g++
+        f77: null
+        fc: null
+      flags: {}
+      operating_system: ubuntu22.04
+      target: x86_64
+      modules: []
+      environment: {}
+      extra_rpaths: []
