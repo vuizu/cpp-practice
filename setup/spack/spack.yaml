@@ -4,12 +4,12 @@ spack:
   - cuda@11.8.0
   - cmake@3.27.9
   - ninja@1.11.1
-  - python@3.10.13
+  - miniconda3@22.11.1
   view: true
   concretizer:
     unify: true
   mirrors:
-    local: file:///root/spack-mirrors
+    local: file:///opt/spack-mirrors
   compilers:
   - compiler:
       spec: gcc@=11.4.0
