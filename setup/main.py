@@ -40,22 +40,22 @@ def host_docker():
         """) 
     exec("""
          sudo tee /etc/docker/daemon.json <<-'EOF'
-            {
-                "registry-mirrors": [
-                    "https://registry.docker-cn.com",
-                    "https://docker.mirrors.ustc.edu.cn",
-                    "https://hub-mirror.c.163.com"
-                ],
-                "exec-opts": [
-                    "native.cgroupdriver=systemd"
-                ],
-                "log-driver": "json-file",
-                "log-opts": {
-                    "max-size": "100m"
-                },
-                "storage-driver": "overlay2"
-            }
-            EOF
+         {
+            "registry-mirrors": [
+                "https://registry.docker-cn.com",
+                "https://docker.mirrors.ustc.edu.cn",
+                "https://hub-mirror.c.163.com"
+            ],
+            "exec-opts": [
+                "native.cgroupdriver=systemd"
+            ],
+            "log-driver": "json-file",
+            "log-opts": {
+                "max-size": "100m"
+            },
+            "storage-driver": "overlay2"
+        }
+        EOF
          """)
     exec("sudo systemctl enable docker --now")
 

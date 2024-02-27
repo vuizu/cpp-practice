@@ -19,7 +19,7 @@ ENV BASHRC=/root/.bashrc
 ENV SPACK_HOME=/opt/spack
 
 RUN git clone -c feature.manyFiles=true https://github.com/spack/spack.git $SPACK_HOME && \
-    echo 'export PATH=/opt/spack/bin:$PATH' >> $BASHRC && \
+    echo 'export PATH="/opt/spack/bin:$PATH"' >> $BASHRC && \
     echo '. /opt/spack/share/spack/setup-env.sh' >> $BASHRC && \
     . $BASHRC && \
     spack env create hpc spack.yaml && \
